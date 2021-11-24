@@ -4,7 +4,7 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: "",
+      search: "panda",
       type: 'all'
     };
   }
