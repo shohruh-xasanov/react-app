@@ -13,7 +13,7 @@ class CardList extends Component {
     }
 
     componentDidMount () {
-        fetch("http://www.omdbapi.com/?apikey=329ffa13&s=panda")
+        fetch('http://www.omdbapi.com/?apikey=329ffa13&s=panda')
             .then(res => res.json())
             .then(data => this.setState({movies : data.Search, loading: false}))
     }
