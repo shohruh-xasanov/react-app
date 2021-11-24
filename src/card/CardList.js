@@ -13,14 +13,14 @@ class CardList extends Component {
     }
 
     componentDidMount () {
-        fetch('http://www.omdbapi.com/?apikey=329ffa13&s=panda')
+        fetch('https://www.omdbapi.com/?apikey=329ffa13&s=panda')
             .then(res => res.json())
             .then(data => this.setState({movies : data.Search, loading: false}))
     }
     
     SearchFilm = (str, type = 'all') => {
         this.setState({loading: true})
-        fetch(`http://www.omdbapi.com/?apikey=329ffa13&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+        fetch(`https://www.omdbapi.com/?apikey=329ffa13&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
             .then(res => res.json())
             .then(data => this.setState({movies : data.Search, loading: false}))
     }
